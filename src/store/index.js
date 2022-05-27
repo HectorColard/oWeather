@@ -1,10 +1,12 @@
 import { applyMiddleware, legacy_createStore as createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import reducer from 'src/reducers/reducer';
+import geoMiddleware from 'src/middlewares/geoMiddleware';
 
+import reducer from 'src/reducers';
 
 const middlewares = applyMiddleware(
+  geoMiddleware,
   // d'autres middlewares directement dans les paramètres
 );
 
