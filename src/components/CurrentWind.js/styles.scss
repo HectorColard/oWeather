@@ -1,0 +1,14 @@
+.current-wind {
+  display: flex;
+  justify-content: space-evenly;
+
+  &--image {
+    width: 4rem;
+    margin-left: 2rem;
+  }
+
+  &--speed {
+    margin-top: 1.3rem;
+    font-size: 1.2rem;
+  }
+}
