@@ -2,6 +2,11 @@
 
   &-city {
     font-size: 2rem;
-    padding: 2rem;
+    margin: 2rem auto 1rem;
+  }
+
+  &-city--county {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 }

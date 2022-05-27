@@ -4,6 +4,7 @@ export const CITY_NAME_FROM_DATAS = 'CITY_NAME_FROM_DATAS';
 export const CITY_LATITUDE_FROM_DATAS = 'CITY_LATITUDE_FROM_DATAS';
 export const CITY_LONGITUDE_FROM_DATAS = 'CITY_LONGITUDE_FROM_DATAS';
 export const CITY_TIMEZONE_FROM_DATAS = 'CITY_TIMEZONE_FROM_DATAS';
+export const CITY_COUNTY_FROM_DATAS = 'CITY_COUNTY_FROM_DATAS';
 
 export const handlePositionValue = (string) => ({
   type: HANDLE_POSITION_VALUE,
@@ -31,5 +32,10 @@ export const cityLongitudeFromDatas = (float) => ({
 
 export const cityTimezoneFromDatas = (string) => ({
   type: CITY_TIMEZONE_FROM_DATAS,
+  value: string,
+});
+
+export const cityCountyFromDatas = (string) => ({
+  type: CITY_COUNTY_FROM_DATAS,
   value: string,
 });
