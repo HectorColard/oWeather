@@ -1,3 +1,5 @@
+import './styles.scss';
+
 const SearchCity = () => (
   <div className="search">
     <form className="search-form">

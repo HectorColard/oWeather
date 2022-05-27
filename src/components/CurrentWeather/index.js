@@ -1,5 +1,6 @@
 import CurrentTemperature from '../CurrentTemperature';
 import SearchCity from '../SearchCity';
+import './styles.scss';
 
 const CurrentWeather = () => (
   <div className="current">
