@@ -2,11 +2,13 @@ import { applyMiddleware, legacy_createStore as createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import geoMiddleware from 'src/middlewares/geoMiddleware';
+import weatherMiddleware from 'src/middlewares/weatherMiddleware';
 
 import reducer from 'src/reducers';
 
 const middlewares = applyMiddleware(
   geoMiddleware,
+  weatherMiddleware,
   // d'autres middlewares directement dans les paramètres
 );
 

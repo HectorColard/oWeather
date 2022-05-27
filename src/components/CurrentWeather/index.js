@@ -6,9 +6,8 @@ import './styles.scss';
 
 const CurrentWeather = () => {
   const city = useSelector((state) => state.position.city);
-  const latitude = useSelector((state) => state.position.latitude);
-  const longitude = useSelector((state) => state.position.longitude);
-  console.log(city, latitude, longitude);
+
+  console.log(city);
 
   return (
     <div className="current">

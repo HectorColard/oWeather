@@ -1,10 +1,11 @@
-import { CITY_LATITUDE_FROM_DATAS, CITY_LONGITUDE_FROM_DATAS, CITY_NAME_FROM_DATAS, HANDLE_POSITION_VALUE } from '../actions/position';
+import { CITY_LATITUDE_FROM_DATAS, CITY_LONGITUDE_FROM_DATAS, CITY_NAME_FROM_DATAS, CITY_TIMEZONE_FROM_DATAS, HANDLE_POSITION_VALUE } from '../actions/position';
 
 const initialState = {
   citySearch: '',
   city: '',
   latitude: 48.85341,
   longitude: 2.3488,
+  timezone: '',
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -31,6 +32,12 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         longitude: action.value,
+      };
+
+    case CITY_TIMEZONE_FROM_DATAS:
+      return {
+        ...state,
+        timezone: action.value,
       };
 
     default:
