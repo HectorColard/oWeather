@@ -3,6 +3,7 @@ import CurrentSky from '../CurrentSky';
 
 import CurrentTemperature from '../CurrentTemperature';
 import CurrentWind from '../CurrentWind.js';
+import DailyWeather from '../DailyWeather';
 import SearchCity from '../SearchCity';
 import './styles.scss';
 
@@ -21,7 +22,7 @@ const CurrentWeather = () => {
       <CurrentTemperature />
       <CurrentWind />
       <CurrentSky />
-
+      <DailyWeather />
     </div>
   );
 };
