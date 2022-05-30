@@ -1,6 +1,9 @@
 .current-sky {
 
   &--image {
-    width: 20rem;
+    width: 40%;
+    @media (min-width: 700px) {
+      width: 20rem;
+    }
   }
 }
