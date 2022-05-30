@@ -30,9 +30,8 @@ const CurrentSky = () => {
     if (code === 95 || code === 96 || code === 99) {
       return thunderStorm;
     }
-
     return sunPng;
-  };
+  }
 
   return (
     <div className="current-sky">

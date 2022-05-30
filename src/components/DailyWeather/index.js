@@ -1,20 +1,35 @@
-import { useSelector } from 'react-redux';
-import Days from './Days';
 import './styles.scss';
 
-const DailyWeather = () => {
-  const daily = useSelector((state) => state.weather.dailyTime);
-  console.log(daily);
-  return (
-    <div className="daily">
-      daily weather !
-      {daily.map((element) => (
-        <Days
-          days={element}
-        />
-      ))}
-    </div>
-  );
-};
+const DailyWeather = ({ weathercode, dailyTime }) => (
+  <div className="days-weather">
+    daily weather !
+    <ul className="days-weather--list">
+      <li className="days-weather--list--day">
+        {dailyTime[0]}
+        {weathercode[0]}
+      </li>
+      <li className="days-weather--list--day">
+        {dailyTime[1]}
+        {weathercode[1]}
+      </li>
+      <li className="days-weather--list--day">
+        {dailyTime[2]}
+        {weathercode[2]}
+      </li>
+      <li className="days-weather--list--day">
+        {dailyTime[3]}
+        {weathercode[3]}
+      </li>
+      <li className="days-weather--list--day">
+        {dailyTime[4]}
+        {weathercode[4]}
+      </li>
+      <li className="days-weather--list--day">
+        {dailyTime[5]}
+        {weathercode[5]}
+      </li>
+    </ul>
+  </div>
+);
 
 export default DailyWeather;

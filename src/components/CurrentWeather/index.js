@@ -7,11 +7,12 @@ import DailyWeather from '../DailyWeather';
 import SearchCity from '../SearchCity';
 import './styles.scss';
 
-const CurrentWeather = () => {
+const CurrentWeather = ({ weathercode, dailyTime }) => {
   const city = useSelector((state) => state.position.city);
   const county = useSelector((state) => state.position.county);
-
-  console.log(city);
+  // const daily = useSelector((state) => state.weather.dailyTime);
+  console.log(dailyTime);
+  console.log(weathercode[0]);
 
   return (
     <div className="current">
@@ -22,7 +23,15 @@ const CurrentWeather = () => {
       <CurrentTemperature />
       <CurrentWind />
       <CurrentSky />
-      <DailyWeather />
+      <DailyWeather
+        dailyTime={dailyTime}
+        weathercode={weathercode}
+        // dailyTime={daily.map((day) => (
+        //   <h3 className="days-weather--time">
+        //     {day}
+        //   </h3>
+        // ))}
+      />
     </div>
   );
 };

@@ -1,0 +1,15 @@
+.days-weather {
+
+  &--image {
+    width: 5rem;
+  }
+
+  &--list {
+    display: flex;
+    overflow: auto;
+
+    &--day {
+      margin: 2rem 0.5rem;
+    }
+  }
+}
