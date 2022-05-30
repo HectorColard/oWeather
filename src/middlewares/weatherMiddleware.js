@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { currentWeather, dailyTime, dailyWeatherCode, GET_WEATHER_DATAS_FROM_API } from '../actions/weather';
+import { currentWeather, dailyMaxTemp, dailyMinTemp, dailyTime, dailyWeatherCode, GET_WEATHER_DATAS_FROM_API } from '../actions/weather';
 
 const weatherMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
@@ -12,6 +12,8 @@ const weatherMiddleware = (store) => (next) => (action) => {
           store.dispatch(currentWeather(response.data.current_weather));
           store.dispatch(dailyTime(response.data.daily.time));
           store.dispatch(dailyWeatherCode(response.data.daily.weathercode));
+          store.dispatch(dailyMinTemp(response.data.daily.temperature_2m_min));
+          store.dispatch(dailyMaxTemp(response.data.daily.temperature_2m_max));
         })
         .catch((error) => {
           console.log(error);

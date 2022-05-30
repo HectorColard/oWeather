@@ -15,7 +15,6 @@ function App() {
   const dailyWeatherCode = useSelector((state) => state.weather.dailyWeatherCode);
   const daily = useSelector((state) => state.weather.dailyTime);
 
-
   function handleCodeWeather(code) {
     if (code === 0 || code === 1) {
       return sunPng;
