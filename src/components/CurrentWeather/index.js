@@ -22,20 +22,18 @@ const CurrentWeather = ({ weathercode, dailyTime }) => {
       <h1 className="current-city">{city}</h1>
       <h2 className="current-city--county">{county}</h2>
       <h3 className="current-city--infos">Today's weather</h3>
-      <CurrentTemperature />
+      {city && <CurrentTemperature />}
       <CurrentWind />
-      <CurrentSky />
+      {city && <CurrentSky />}
+      {city
+      && (
       <DailyWeather
         dailyTime={dailyTime}
         weathercode={weathercode}
         minTemp={minTemp}
         maxTemp={maxTemp}
-        // dailyTime={daily.map((day) => (
-        //   <h3 className="days-weather--time">
-        //     {day}
-        //   </h3>
-        // ))}
       />
+      )}
     </div>
   );
 };

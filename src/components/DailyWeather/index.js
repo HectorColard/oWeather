@@ -39,6 +39,12 @@ const DailyWeather = ({ weathercode, dailyTime, minTemp, maxTemp }) => (
         <p>Min: {minTemp[5]}°</p>
         <p>Max: {maxTemp[5]}°</p>
       </li>
+      <li className="days-weather--list--day">
+        {dailyTime[6]}
+        {weathercode[6]}
+        <p>Min: {minTemp[6]}°</p>
+        <p>Max: {maxTemp[6]}°</p>
+      </li>
     </ul>
   </div>
 );
